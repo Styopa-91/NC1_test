@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.nc1_test.controllers.NewsArticlesController">
+    <top>
+        <ComboBox fx:id="filterComboBox" />
+    </top>
+    <center>
+        <ListView fx:id="newsListView" />
+    </center>
+    <bottom>
+        <HBox>
+            <Button text="UP" onAction="#handlePreviousArticle" />
+            <Button text="DOWN" onAction="#handleNextArticle" />
+            <Button text="Add" onAction="#handleAddButton" />
+            <Button text="Edit" onAction="#handleEditButton" />
+            <Button text="Delete" onAction="#handleDeleteArticle" />
+        </HBox>
+    </bottom>
+</BorderPane>

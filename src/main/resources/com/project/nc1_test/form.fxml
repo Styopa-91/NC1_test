@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.nc1_test.controllers.NewsArticlesController">
+    <center>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: #f0f0f0;">
+            <!-- Form for adding/editing an article -->
+            <HBox><Label>Title:</Label></HBox>
+            <TextField fx:id="titleField" promptText="Title" style="-fx-font-size: 14px; -fx-padding: 5;"/>
+            <HBox><Label>Description:</Label></HBox>
+            <TextArea fx:id="contentArea" promptText="Description" prefRowCount="5" style="-fx-font-size: 14px; -fx-padding: 5;" wrapText="true"/>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label>Time:</Label>
+                <ComboBox fx:id="hoursComboBox" style="-fx-padding: 5;"/>
+                <Label> : </Label>
+                <ComboBox fx:id="minutesComboBox" style="-fx-padding: 5;"/>
+            </HBox>
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="saveButton" text="Save" onAction="#handleAddArticle" style="-fx-pref-width: 100px; -fx-font-size: 14px; -fx-padding: 10; -fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+                <Button fx:id="cancelButton" text="Cancel" onAction="#handleCancel" style="-fx-pref-width: 100px; -fx-font-size: 14px; -fx-padding: 10; -fx-background-color: #f44336; -fx-text-fill: white;"/>
+            </HBox>
+
+        </VBox>
+
+    </center>
+</BorderPane>
